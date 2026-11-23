@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFF9F0;
+    color: #33251F;
+    line-height: 1.6;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+.main-header,
+.page-header {
+    background-color: #4E2D1E;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #4E2D1E;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D4AF37;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #D4AF37;
+}
+
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: #D4AF37;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.register-btn {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #4E2D1E;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: white;
+}
+
+.overview {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.overview h2 {
+    color: #4E2D1E;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.overview p {
+    max-width: 950px;
+    margin: 15px auto;
+    font-size: 17px;
+}
+
+.highlights {
+    padding: 35px 0 60px;
+    text-align: center;
+}
+
+.highlights h2 {
+    font-size: 30px;
+    color: #4E2D1E;
+    margin-bottom: 30px;
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.highlight-card {
+    flex: 1 1 200px;
+    background-color: white;
+    padding: 30px 15px;
+    border-radius: 8px;
+    border-bottom: 5px solid #4E2D1E;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card h3 {
+    font-size: 38px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-weight: bold;
+    color: #4E2D1E;
+}
+
+.page-header {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    margin-top: 35px;
+    color: #D4AF37;
+}
+
+.page-header p {
+    margin-top: 10px;
+}
+
+.programme-section {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.programme-section h2 {
+    text-align: center;
+    color: #4E2D1E;
+    margin-bottom: 25px;
+}
+
+.programme-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.programme-table th,
+.programme-table td {
+    padding: 14px;
+    border: 1px solid #D8C7B8;
+    text-align: left;
+}
+
+.programme-table thead th {
+    background-color: #4E2D1E;
+    color: white;
+}
+
+.programme-table .day-heading th {
+    background-color: #D4AF37;
+    color: #4E2D1E;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px;
+}
+
+.programme-table tbody tr:not(.day-heading):nth-child(even) {
+    background-color: #F1E6D9;
+}
+
+.speakers-section,
+.additional-speakers,
+.call-for-papers {
+    padding: 45px 0;
+}
+
+.speakers-section h2,
+.additional-speakers h2,
+.call-for-papers h2 {
+    color: #4E2D1E;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.speaker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.speaker-card {
+    width: 48%;
+    min-width: 280px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.speaker-card img {
+    width: 30%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.speaker-card h3 {
+    color: #4E2D1E;
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.designation {
+    color: #A77B19;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.organisation {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.speaker-card p:last-child {
+    font-size: 15px;
+}
+
+.speaker-table,
+.dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.speaker-table th,
+.speaker-table td,
+.dates-table th,
+.dates-table td {
+    border: 1px solid #D8C7B8;
+    padding: 14px;
+    text-align: left;
+}
+
+.speaker-table thead,
+.dates-table thead {
+    background-color: #4E2D1E;
+    color: white;
+}
+
+.speaker-table tbody tr:nth-child(even),
+.dates-table tbody tr:nth-child(even) {
+    background-color: #EDE0D3;
+}
+
+.call-for-papers {
+    background-color: #F1E6D9;
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.call-for-papers p {
+    margin-bottom: 15px;
+}
+
+.call-for-papers h3 {
+    color: #4E2D1E;
+    margin: 25px 0 15px;
+}
+
+footer {
+    background-color: #4E2D1E;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+.exhibitor-content {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.exhibitor-content h1 {
+    color: #4E2D1E;
+    margin-bottom: 20px;
+}
+
+.exhibitor-content p {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content h2 {
+        font-size: 17px;
+    }
+
+    .highlight-container {
+        flex-direction: column;
+    }
+
+    .speaker-card {
+        width: 100%;
+    }
+
+    .programme-table,
+    .speaker-table,
+    .dates-table {
+        font-size: 13px;
+    }
+
+    .programme-table th,
+    .programme-table td,
+    .speaker-table th,
+    .speaker-table td,
+    .dates-table th,
+    .dates-table td {
+        padding: 8px;
+    }
+
+    .call-for-papers {
+        padding: 20px;
+    }
+}
